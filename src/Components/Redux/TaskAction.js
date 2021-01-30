@@ -24,11 +24,15 @@ export const onFetchTask=()=>{
 }
 
 export const onLogin=(Data,history)=>{
+
     return(dispatch)=>{
-        if(Data.user_name==="admin123" && Data.password==="123456")
-        {
-           
-            localStorage.setItem("userData", JSON.stringify(Data));
+        
+        // localStorage.setItem("userData", JSON.stringify(Data));
+
+        const token=JSON.parse(localStorage.getItem("userData"));
+
+        if(Data.password===token.password){
+            //  localStorage.setItem("userData", JSON.stringify(Data));
             dispatch(onLoginSuccess(Data));
             history.push("/task")
         }

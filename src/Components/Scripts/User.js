@@ -5,7 +5,7 @@ export default class User extends Component {
 
 
         onLogOut=()=>{
-            localStorage.removeItem('userData'); 
+           // localStorage.removeItem('userData'); 
             this.props.history.push("/login");
         }
 

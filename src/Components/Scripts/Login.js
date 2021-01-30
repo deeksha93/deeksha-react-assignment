@@ -69,6 +69,7 @@ class Login extends Component {
         const{user_name,password}=this.state;
         const Data={user_name,password};
         //console.log(Data.user_name);
+        
         this.props.onLogin(Data,this.props.history);
         
     }

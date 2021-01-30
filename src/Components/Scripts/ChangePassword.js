@@ -25,11 +25,11 @@ export default class ChangePassword extends Component {
                 }
                 console.log(data);
                 localStorage.setItem("userData", JSON.stringify(data));
-                this.props.history.push("/tasks");
+                this.props.history.push("/task");
             }
 
             onLogOut=()=>{
-                localStorage.removeItem('userData'); 
+               // localStorage.removeItem('userData'); 
                 this.props.history.push("/login");
             }
 
